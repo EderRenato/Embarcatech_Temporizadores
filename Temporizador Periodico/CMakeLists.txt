@@ -46,7 +46,9 @@ pico_enable_stdio_usb(Embarcatech_Temporizador_Periodico 1)
 
 # Add the standard library to the build
 target_link_libraries(Embarcatech_Temporizador_Periodico
-        pico_stdlib)
+        pico_stdlib
+        hardware_timer
+        )
 
 # Add the standard include files to the build
 target_include_directories(Embarcatech_Temporizador_Periodico PRIVATE
@@ -55,7 +57,7 @@ target_include_directories(Embarcatech_Temporizador_Periodico PRIVATE
 
 # Add any user requested libraries
 target_link_libraries(Embarcatech_Temporizador_Periodico 
-        
+        hardware_timer
         )
 
 pico_add_extra_outputs(Embarcatech_Temporizador_Periodico)
